@@ -2,125 +2,158 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;700&display=swap');
 
 @layer base {
   :root {
-    /* MekWeb modern dark palette: black + white + blue */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    /* GameZone — Light mode */
+    --background: 0 0% 100%;
+    --foreground: 240 20% 10%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 20% 10%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 20% 10%;
 
-    --primary: 217 91% 60%;          /* blue #3B82F6 */
+    --primary: 265 89% 58%;            /* electric purple */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 213 94% 68%;
+    --primary-glow: 265 89% 70%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 100% 56%;         /* electric blue */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 69%; /* ~#B0B0B0 */
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 6% 40%;
 
-    --accent: 217 91% 60%;
+    --accent: 142 90% 45%;             /* neon green */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 217 30% 18%;
-    --input: 0 0% 14%;
-    --ring: 217 91% 60%;
+    --border: 240 10% 90%;
+    --input: 240 10% 92%;
+    --ring: 265 89% 58%;
 
-    --radius: 1rem;
+    --neon-pink: 320 90% 60%;
+    --neon-cyan: 188 95% 55%;
 
-    /* Brand accent tokens (kept "gold" names so existing classes keep working) */
-    --gold: 217 91% 60%;        /* blue #3B82F6 */
-    --gold-light: 213 94% 68%;  /* lighter blue */
-    --gold-deep: 221 83% 53%;   /* #2563EB hover */
+    --radius: 0.85rem;
 
-    --gradient-gold: linear-gradient(135deg, hsl(221 83% 53%), hsl(217 91% 60%) 50%, hsl(213 94% 78%));
-    --gradient-radial-gold: radial-gradient(circle at 50% 0%, hsl(217 91% 60% / 0.18), transparent 60%);
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4% / 0.4) 0%, hsl(0 0% 4%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 9%), hsl(0 0% 5%));
+    --gradient-primary: linear-gradient(135deg, hsl(265 89% 58%), hsl(210 100% 56%));
+    --gradient-neon: linear-gradient(135deg, hsl(320 90% 60%), hsl(265 89% 58%) 50%, hsl(188 95% 55%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(265 89% 58% / 0.18), transparent 60%);
 
-    --shadow-gold: 0 10px 40px -10px hsl(217 91% 60% / 0.45);
-    --shadow-gold-soft: 0 0 60px hsl(217 91% 60% / 0.18);
-    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.7);
+    --shadow-neon: 0 0 30px hsl(265 89% 58% / 0.45);
+    --shadow-glow: 0 0 60px hsl(210 100% 56% / 0.35);
 
-    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
-
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 20%;
+    --sidebar-primary: 265 89% 58%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent: 240 10% 95%;
+    --sidebar-accent-foreground: 240 20% 10%;
+    --sidebar-border: 240 10% 90%;
+    --sidebar-ring: 265 89% 58%;
+  }
+
+  .dark {
+    /* GameZone — Dark mode (default cyberpunk) */
+    --background: 240 25% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 22% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 22% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 265 89% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 265 89% 75%;
+
+    --secondary: 210 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 15% 14%;
+    --muted-foreground: 240 8% 65%;
+
+    --accent: 142 90% 50%;
+    --accent-foreground: 240 25% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 18%;
+    --input: 240 20% 14%;
+    --ring: 265 89% 65%;
+
+    --gradient-hero: radial-gradient(ellipse at top, hsl(265 89% 58% / 0.35), transparent 60%);
+    --shadow-neon: 0 0 35px hsl(265 89% 65% / 0.6);
+    --shadow-glow: 0 0 70px hsl(210 100% 60% / 0.45);
+
+    --sidebar-background: 240 25% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 265 89% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 12%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 217 30% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-border: 240 20% 16%;
+    --sidebar-ring: 265 89% 65%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
 
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(217 91% 60% / 0.12), transparent),
-      radial-gradient(ellipse 60% 50% at 100% 100%, hsl(217 91% 60% / 0.06), transparent);
+    background-image: var(--gradient-hero);
     background-attachment: fixed;
   }
 
-  h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: -0.02em;
+  [dir="rtl"] body {
+    font-family: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Orbitron', 'Rajdhani', system-ui, sans-serif;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
-  .text-gold {
-    color: hsl(var(--gold));
-  }
-  .bg-gradient-gold {
-    background: var(--gradient-gold);
-  }
-  .text-gradient-gold {
-    background: var(--gradient-gold);
+  .text-gradient-neon {
+    background: var(--gradient-neon);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
-  .shadow-gold-soft {
-    box-shadow: var(--shadow-gold-soft);
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-neon { background: var(--gradient-neon); }
+  .shadow-neon { box-shadow: var(--shadow-neon); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
   }
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
+  .glass-strong {
+    @apply bg-card/80 backdrop-blur-2xl border border-border/60;
   }
-  .bg-card-gradient {
-    background: var(--gradient-card);
+  .neon-border {
+    box-shadow: inset 0 0 0 1px hsl(var(--primary) / 0.4), 0 0 20px hsl(var(--primary) / 0.25);
   }
-  .border-gold {
-    border-color: hsl(var(--gold) / 0.4);
+  .container-zone {
+    @apply max-w-7xl mx-auto px-4 md:px-8;
   }
-  .glow-gold {
-    box-shadow: 0 0 40px hsl(var(--gold) / 0.4), 0 0 80px hsl(var(--gold) / 0.15);
-  }
-  .container-luxe {
-    @apply max-w-7xl mx-auto px-6 md:px-10;
-  }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
 }
